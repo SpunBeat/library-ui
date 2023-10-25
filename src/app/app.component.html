@@ -1,0 +1,35 @@
+<!-- Two Way Binding -->
+<div>
+  <div *ngFor="let author of authors">
+    <div>
+      <strong>{{author.Author_ID}} </strong> {{author.firstName}} {{author.lastName}}
+    </div>
+  </div>
+</div>
+
+<!-- Directiva alt, valor: Cristiano -->
+<!-- Directiva dinamica src, valor: propiedad imagen, debe estar en la clase -->
+<img
+  alt="Cristiano"
+  [src]="imagen" />
+
+<button
+  type="button"
+  [attr.aria-label]="ariaLabel"
+  (click)="triggerAlert()"
+  >Alert</button>
+
+<div>Counter. {{this.counter}}</div>
+
+<button type="button" (click)="increaseCounter()">Increase</button>
+<button type="button" (click)="decreaseCounter()">Decrease</button>
+
+
+<app-custom-img
+  *ngFor="let color of colores"
+  [colorName]="color.name"
+  (counter)="onCounter({counterHijo: $event, index: color.index})"
+  (limitReach)="onLimitReached()"
+  ></app-custom-img>
+
+<router-outlet></router-outlet>

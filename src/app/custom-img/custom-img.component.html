@@ -1,0 +1,9 @@
+<div class="box" [ngStyle]="calcularEstilos(counterInterno, colorName)">
+    <div class="normal" [ngClass]="calcularClases(counterInterno)">
+        Custom Img Rendered with color {{colorName}} with counter {{counterInterno}}
+    </div>
+    <button type="button" (click)="alertOfColor()">Enviar alerta</button>
+    <button type="button" (click)="increase()">Increase</button>
+    <button type="button" (click)="decrease()">Decrease</button>
+</div>
+

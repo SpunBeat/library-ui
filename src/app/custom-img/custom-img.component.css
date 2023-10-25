@@ -1,0 +1,20 @@
+.normal {
+    font-family: sans-serif;
+    flex-grow: 1;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
